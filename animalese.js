@@ -54,6 +54,7 @@ var Animalese = function(letters_file, onload) {
 
   var xhr = new XMLHttpRequest();
   xhr.open('GET', letters_file);
+  xhr.setRequestHeader("accept", "application/json");   
   xhr.responseType = 'arraybuffer';
   var req = this;
   xhr.onload = function(e) {
